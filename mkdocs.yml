@@ -1,0 +1,8 @@
+site_name: 
+system_name: coe-platform
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core
