@@ -1,7 +1,7 @@
-FROM node:16
+FROM alpine:latest
 
 # Create app directory
-WORKDIR /appjs
+WORKDIR /
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -15,5 +15,5 @@ WORKDIR /appjs
 # Bundle app source
 COPY . .
 
-EXPOSE 3000
-CMD [ "tail", "-f", "/dev/null" ]
+#EXPOSE 3000
+ENTRYPOINT [ "tail", "-f", "/dev/null" ]
