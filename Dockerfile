@@ -16,4 +16,4 @@ WORKDIR /appjs
 COPY . .
 
 EXPOSE 3000
-CMD [ "node", "app.js" ]
+CMD [ "tail", "-f", "/dev/null" ]
