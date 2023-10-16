@@ -47,7 +47,7 @@ jobs:
    - name: create env file
      id: env
      run: |
-        echo $TEST_ENV_FILE > .env
+        echo "$TEST_ENV_FILE" > .env
      env:
        TEST_ENV_FILE : ${{secrets.ENVIRONMENT_FILE}}    
    - name: Kaniko builder
