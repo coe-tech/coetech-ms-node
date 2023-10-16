@@ -48,6 +48,8 @@ jobs:
      id: env
      run: |
         echo $TEST_ENV_FILE > .env
+     env:
+       TEST_ENV_FILE : ${{secrets.ENVIRONMENT_FILE}}    
    - name: Kaniko builder
      uses: aevea/action-kaniko@v0.10.0
      with:
@@ -57,5 +59,4 @@ jobs:
        tag: ${{ github.run_number }}
   #         cache: true
   #         cache_registry: walber7/cache
-     env:
-       TEST_ENV_FILE : ${{secrets.ENVIRONMENT_FILE}}      
+  
