@@ -13,7 +13,7 @@ WORKDIR /appjs
 # RUN npm ci --only=production
 
 # Bundle app source
-COPY app.js .
+COPY . .
 
 EXPOSE 3000
 CMD [ "node", "app.js" ]
